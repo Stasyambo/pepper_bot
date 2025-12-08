@@ -127,7 +127,7 @@ def main():
     db.cleanup_old_deals(7)
 
     # Создаем Application и передаем ему токен бота
-    application = Application.builder().token(BOT_TOKEN).build()
+    application = Application.builder().token(os.environ["BOT_TOKEN"]).build()
 
     # Добавляем обработчики
     application.add_handler(CommandHandler("start", start))
