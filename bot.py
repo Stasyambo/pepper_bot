@@ -115,8 +115,8 @@ async def scheduled_task(app):
             logger.info("Плановая проверка завершена")
         except Exception as e:
             logger.error(f"Ошибка в плановой проверке: {e}")
-        # Ждем 10 минут между проверками
-        await asyncio.sleep(600)
+        # Ждем 3 минуты между проверками
+        await asyncio.sleep(180)
 
 
 def main():
